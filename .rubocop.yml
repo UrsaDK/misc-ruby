@@ -1,0 +1,28 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-sequel
+
+AllCops:
+  Exclude:
+    - '.bundle/**/*'
+    - 'spec/fixtures/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - '**/spec_helper.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - '**/*_spec.rb'
+  ExcludedMethods:
+    - 'namespace'
+    - 'context'
+    - 'describe'
+    - 'shared_context'
+    - 'shared_examples'
+
+Style/Documentation:
+  Enabled: false
